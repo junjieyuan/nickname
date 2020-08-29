@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
-raw_string=$(uuidgen | sha512sum)
-echo ${raw_string:0:7}
+long_name=$(uuidgen | sha512sum)
+short_name=${long_name:0:7}
 
+echo $short_name
